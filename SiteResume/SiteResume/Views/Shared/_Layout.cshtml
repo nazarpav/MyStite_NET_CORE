@@ -53,12 +53,22 @@
                         </tr>
                     </tbody>
                 </table>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    using (Html.BeginForm("Logout", "Admin", FormMethod.Post, new { id = "logoutForm" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <a class="NavBarElemCustomStyle" onclick="document.getElementById('logoutForm').submit();">
+                            <img src="~/images/_LayoutImages/LogoutIco.png" alt="Logout" />
+                        </a>
+                    }
+                }
             </div>
         </nav>
     </header>
     <div class="container PadMar_0 W100 MaxWH_100">
         <main>
-        @RenderBody()
+            @RenderBody()
         </main>
         <canvas id="canvas" />
     </div>

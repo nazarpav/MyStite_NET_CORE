@@ -17,6 +17,7 @@ namespace SiteResume.Controllers
         {
             return View();
         }
+        //[Authorize(Roles = "Admin")]
         [AllowAnonymous]
         public IActionResult AboutMe()
         {

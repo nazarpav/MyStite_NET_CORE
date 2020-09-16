@@ -2,7 +2,7 @@
 @{ ViewData["Title"] = "Admin Login"; }
 <link href="~/css/AdminLoginStyle.min.css" rel="stylesheet" />
 <p class="headerLabel">Admin Login Panel</p>
-
+@Html.AntiForgeryToken()
 <div class="row PadMar_0">
     <div class="col-md"></div>
     <div class="col-md  PadMar_0">
