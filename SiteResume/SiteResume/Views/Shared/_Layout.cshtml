@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]Nazar Pavliuk</title>
+
+    <link rel="shortcut icon" href="~/images/_LayoutImages/LogoSmall.png" type="image/png">
+    <link href="~/css/Animation1.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/_LayoutStyle.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark NavBarStyle">
+            <img src="~/images/_LayoutImages/LogoSmall.png" title="ScrollMy☺" style="height:42px; margin-right: 15px;" id="SpeedButton" alt="Home" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="NavBarElemCustomStyle" asp-area="" asp-controller="Main" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="NavBarElemCustomStyle" asp-area="" asp-controller="Main" asp-action="AboutMe">About me</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="NavBarElemCustomStyle" asp-area="" asp-controller="Main" asp-action="DownloadResume">Download my resume</a>
+                    </li>
+                </ul>
+                <table class="PadMar_0">
+                    <tbody class="PadMar_0">
+                        <tr class="PadMar_0">
+                            <td class="PadMar_0">
+                                <img src="~/images/_LayoutImages/GitHubIco.png" alt="GitHub " style="height: 20px;" />
+                                <a href="https://github.com/nazarpav" class="NavBarElemCustomStyle FontSizeSmall">github.com/nazarpav</a>
+                            </td>
+                            <td class="PadMar_0">
+                                <img src="~/images/_LayoutImages/Telegram-icon.png" alt="Telegram " style="height: 20px;" />
+                                <a href="https://t.me/n_qwerty" class="NavBarElemCustomStyle FontSizeSmall">t.me/n_qwerty</a>
+                            </td>
+                        </tr>
+                        <tr class="PadMar_0">
+                            <td class="PadMar_0">
+                                <img src="~/images/_LayoutImages/GmailIco.png" alt="GitHub " style="height: 20px;" />
+                                <a href="mailto:hesab.k18@gmail.com" class="NavBarElemCustomStyle FontSizeSmall">hesab.k18@@gmail.com</a>
+                            </td>
+                            <td class="PadMar_0">
+                                <img src="~/images/_LayoutImages/LinkedinIco.png" alt="GitHub " style="height: 20px;" />
+                                <a href="https://www.linkedin.com/in/nazar-pavliuk-688435193/" class="NavBarElemCustomStyle FontSizeSmall">nazar-pavliuk</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </nav>
+    </header>
+    <div class="container PadMar_0 W100 MaxWH_100">
+        <main>
+        @RenderBody()
+        </main>
+        <canvas id="canvas" />
+    </div>
+    <div>
+        <footer>
+            <p class="blurFilter item">&copy; @DateTime.Now.Year Nazar Pavliuk Site-Resume</p>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/Animation1.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

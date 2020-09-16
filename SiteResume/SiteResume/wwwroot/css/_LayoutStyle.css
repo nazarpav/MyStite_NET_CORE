@@ -1,0 +1,100 @@
+﻿@font-face {
+  font-family: 'Pixel1';
+  src: url("../Fonts/5by7.ttf"); }
+
+@font-face {
+  font-family: 'Pixel2';
+  src: url("../Fonts/Alpha_Smart_3000.ttf"); }
+
+@font-face {
+  font-family: 'Pixel3';
+  src: url("../Fonts/Modern_Dot_Digital-7.ttf"); }
+
+@font-face {
+  font-family: 'Pixel4';
+  src: url("../Fonts/Modern_Led_Board-7.ttf"); }
+
+.NavBarStyle {
+  background-color: rgba(76, 209, 55, 0.05);
+  backdrop-filter: blur(10px);
+  width: 100%; }
+
+.NavBarElemCustomStyle {
+  margin-right: 15px;
+  color: #718093;
+  /*font-family: 'Lincoln/MITRE L/M 5x7';*/
+  font-size: xx-large; }
+
+body {
+  margin: 0;
+  font-family: Pixel1;
+  height: 100vh; }
+
+.blurFilter {
+  background-color: rgba(76, 209, 55, 0.05);
+  backdrop-filter: blur(10px); }
+
+.FontSizeSmall {
+  font-size: medium; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  color: #4cd137;
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
+.W100 {
+  width: 100%; }
+
+.H100 {
+  height: 100%; }
+
+.PadMar_0 {
+  padding: 0;
+  margin: 0; }
+
+.PadLeft_10 {
+  padding-left: 10px; }
+
+.MaxWH_100 {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: unset; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4cd137;
+  border-radius: 10px; }
+
+footer {
+  margin: 0;
+  margin-top: 2vh;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  /*position: fixed;*/
+  bottom: 0;
+  width: 100%; }
+
+footer .item {
+  text-align: center;
+  max-height: 8.2vh;
+  min-height: 8.2vh;
+  padding-top: 4vh;
+  margin: 0;
+  font-size: x-large;
+  color: #4cd137; }

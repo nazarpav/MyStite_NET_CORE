@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/StyleSheet.css",
+    "inputFile": "wwwroot/css/StyleSheet.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/_LayoutStyle.css",
+    "inputFile": "wwwroot/css/_LayoutStyle.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/AdminLoginStyle.css",
+    "inputFile": "wwwroot/css/AdminLoginStyle.scss"
+  }
+]

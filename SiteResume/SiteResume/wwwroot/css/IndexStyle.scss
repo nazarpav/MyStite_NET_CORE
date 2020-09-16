@@ -1,0 +1,51 @@
+﻿$height: 25vh;
+$width: $height/9*16;
+
+/*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}*/
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*margin-bottom: 20px;*/
+}
+
+div.scrollmenu div {
+    max-height: $height;
+    max-width: $width;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    /*padding: 14px;*/
+}
+
+.Rotate_90d {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #4cd137;
+}
+
+.CaruselItemStyle {
+    /*height: 100%;
+    width:auto;*/
+    width: 100%;
+    height: auto;
+    max-height: $height;
+    max-width: $height/9*16;
+}
+.ImageStyle {
+    max-height: $height;
+    max-width: $height*0.585;
+    min-height: $height;
+    min-width: $height*0.585;
+}
