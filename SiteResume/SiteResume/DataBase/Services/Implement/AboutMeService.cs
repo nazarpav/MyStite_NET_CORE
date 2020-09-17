@@ -1,25 +1,34 @@
-﻿using SiteResume.DataBase.Repositories.Interafaces;
+﻿using AutoMapper;
+using SiteResume.DataBase.Entities;
+using SiteResume.DataBase.Repositories.Interafaces;
 using SiteResume.DataBase.Services.Interfaces;
 using SiteResume.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace SiteResume.DataBase.Services.Implement
 {
     public class AboutMeService : IAboutMeService
     {
-        private readonly IAboutMeRepository _aboutMeRepository;
-        public AboutMeService(IAboutMeRepository repository)
+        private readonly IAboutMeRepository _aboutMeRepository; 
+        private readonly IMapper _mapper;
+        public AboutMeService(IAboutMeRepository repository, IMapper mapper)
         {
             _aboutMeRepository = repository;
+            _mapper = mapper;
         }
-
-        public void AddNews(AboutMeVM newsAdd)
+        public void Admin_AddNews(Admin_AboutMeVM newsAdd)
         {
             throw new NotImplementedException();
         }
-
-        public AboutMeVM[] GetAllEntries()
+        public Admin_AboutMeVM[] Admin_GetAllEntries()
         {
-            return _aboutMeRepository.GetAll();
+            throw new NotImplementedException();
+        }
+        public AboutMeVM GetEntry()
+        {
+            return _mapper.Map<AboutMe, AboutMeVM> (_aboutMeRepository.GetAll().Where(q => q.IsActive == true).FirstOrDefault()) ;
         }
     }
 }

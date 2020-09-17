@@ -28,6 +28,12 @@
                     <li class="nav-item active">
                         <a class="NavBarElemCustomStyle" asp-area="" asp-controller="Main" asp-action="DownloadResume">Download my resume</a>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item active">
+                            <a class="NavBarElemCustomStyle" asp-area="" asp-controller="AdminPanel" asp-action="Index" style="color: #e84118;">Admin panel</a>
+                        </li>
+                    }
                 </ul>
                 <table class="PadMar_0">
                     <tbody class="PadMar_0">
@@ -55,11 +61,11 @@
                 </table>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    using (Html.BeginForm("Logout", "Admin", FormMethod.Post, new { id = "logoutForm" }))
+                    using (Html.BeginForm("Logout", "AdminLogin", FormMethod.Post, new { id = "logoutForm" }))
                     {
                         @Html.AntiForgeryToken()
                         <a class="NavBarElemCustomStyle" onclick="document.getElementById('logoutForm').submit();">
-                            <img src="~/images/_LayoutImages/LogoutIco.png" alt="Logout" />
+                            <img src="~/images/_LayoutImages/LogoutIco.png" alt="Logout" class="logoutImg"/>
                         </a>
                     }
                 }
@@ -70,7 +76,7 @@
         <main>
             @RenderBody()
         </main>
-        <canvas id="canvas" />
+        <canvas id="canvas" class="bgCanvas" />
     </div>
     <div>
         <footer>

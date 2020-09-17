@@ -10,5 +10,9 @@
   {
     "outputFile": "wwwroot/css/AdminLoginStyle.css",
     "inputFile": "wwwroot/css/AdminLoginStyle.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/AdminPanel_IndexStyle.css",
+    "inputFile": "wwwroot/css/AdminPanel_IndexStyle.scss"
   }
 ]

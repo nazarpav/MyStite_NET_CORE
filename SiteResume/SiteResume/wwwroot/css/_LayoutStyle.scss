@@ -54,6 +54,7 @@ a:visited {
 a:hover {
     color: #4cd137;
     text-decoration: none;
+    font-weight:bold;
 }
 
 a:active {
@@ -115,4 +116,10 @@ footer .item {
     margin: 0;
     font-size: x-large;
     color: #4cd137;
+}
+.logoutImg:hover {
+    cursor: alias;
+    border-radius: 5px;
+    background-color: rgba(76, 209, 55, 0.3);
+    backdrop-filter: blur(10px);
 }

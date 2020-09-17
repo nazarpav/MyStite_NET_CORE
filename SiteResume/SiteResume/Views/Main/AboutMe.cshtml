@@ -1,4 +1,5 @@
-﻿@{
+﻿@model SiteResume.Models.AboutMeVM
+@{
     ViewBag.Title = "AboutMe";
 }
 <link href="~/css/AboutMyStyle.min.css" rel="stylesheet" />
@@ -14,37 +15,26 @@
                         </div>
                         <div class="col-lg-11  PadMar_0 MaxWH_100">
                             <h4>
-                                <span class="greenFont">Дата народження: </span>20.06.2001<br>
-                                <span class="greenFont">e-mail: </span>hesab.k18@gmail.com<br>
-                                <span class="greenFont">тел: </span>+380689560316 (Viber, WhatsApp)<br>
-                                <span class="greenFont">Telegram: </span>https://t.me/hesab_qwerty <br>
-                                <span class="greenFont">GitHub: </span>https://github.com/nazarpav
+                                <span class="greenFont">Дата народження: </span>@Model.DateOfBirth.ToLongDateString()<br>
+                                <span class="greenFont">e-mail: </span>@Model.Email<br>
+                                <span class="greenFont">тел: </span>@Model.PhoneNumber @Model.RegisteredSocialNetworksWithPhone<br>
+                                <span class="greenFont">Telegram: </span>@Model.TelegramLink <br>
+                                <span class="greenFont">GitHub: </span>@Model.GitHubLink
                             </h4>
                         </div>
                     </div>
                 </div>
                 <h5>
                     <span class="greenFont">Навички:</span><br>
-                    Програмування: C++,C#;<br>
-                    Знання UML, Git, STL C++, design patterns, OOP;<br>
-                    Впевнений користувач Windows,<br>
-                    користувався графічними дистрибутивами Debian similar Linux,в ході навчання<br>
-                    розгортав та конфігурував веб сервери на CentOS та Ubuntu server.<br>
-                    Володію базовими знаннями HTML, CSS, php, JavaScript (ознайомлювався з React).<br>
-                    Рівень англійської – A2.<br><br>
+                    Програмування: @Model.Skills<br>
                     <span class="greenFont">Освіта:</span><br>
-                    2007-2018 – Клеванський НВК “школа-ліцей”<br>
-                    2018-дотепер Комп'ютерна Академія ШАГ м.Рівне, навчання у напрямку розробка<br>
-                    програмного забезпечення, студент 2 курсу.<br><br>
+                    @Model.Educations<br>
                     <span class="greenFont">Додаткова освіта:</span><br>
-                    2011-2013 – курси комп'ютерної підготовки за освітньою програмою, з подальшим<br>
-                    отриманням кваліфікації «оператор персонального комп'ютера».<br><br>
+                    @Model.AdditionalEducations<br><br>
                     <span class="greenFont">Ціль:</span><br>
-                    Професійний ріст та поглиблення знань в сфері IT.<br><br>
-                    <span class="greenFont">Особисті якості:</span><br>
-                    Почав вивчати програмування у 2017 році, за декілька тижнів з нуля<br>
-                    вивчив основи процедурного стилю програмування на C++. Досить швидко навчаюсь чомусь<br>
-                    новому, під час навчання в Академії для мене, ще не було незрозумілих тем.<br>
+                    @Model.CareerObjective<br><br>
+                    <span class="greenFont">Додатково:</span><br>
+                    @Model.AdditionalInformation<br>
                 </h5>
             </div>
         </div>

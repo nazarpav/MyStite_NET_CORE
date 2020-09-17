@@ -5,12 +5,12 @@ using SiteResume.DataBase.Entities;
 using SiteResume.Models;
 namespace SiteResume.Controllers
 {
-    public class AdminController : Controller
+    public class AdminLoginController : Controller
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly RoleManager<Role> _roleManager;
-        public AdminController(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<Role> roleManager)
+        public AdminLoginController(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<Role> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

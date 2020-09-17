@@ -9,6 +9,8 @@ namespace SiteResume.Models
         public string UrlSlug { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string RegisteredSocialNetworksWithPhone { get; set; }
         public string GitHubLink { get; set; }
         public string LinkedInLink { get; set; }
         public string TelegramLink { get; set; }
@@ -18,5 +20,6 @@ namespace SiteResume.Models
         public string Educations { get; set; }
         public string AdditionalEducations { get; set; }
         public string CareerObjective { get; set; }
+        public string AdditionalInformation { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +11,10 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using SiteResume.DataBase.Context;
 using SiteResume.DataBase.Entities;
+using SiteResume.DataBase.Repositories.Implement;
+using SiteResume.DataBase.Repositories.Interafaces;
+using SiteResume.DataBase.Services.Implement;
+using SiteResume.DataBase.Services.Interfaces;
 using System.IO;
 namespace SiteResume
 {
@@ -38,12 +43,19 @@ namespace SiteResume
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
             }).AddEntityFrameworkStores<SiteResumeDBContext>().AddDefaultTokenProviders();
-            //services.AddScoped<ICategoryRepo, CategoryRepo>();
-            //services.AddScoped<INewsRepo, NewsRepo>();
-            //services.AddScoped<INewsService, NewsService>();
+            services.AddScoped<IAboutMeRepository, AboutMeRepository>();
+            services.AddScoped<IAboutMeService, AboutMeService>();
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
             services.AddSession();
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMvc();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

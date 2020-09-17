@@ -2,15 +2,18 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SiteResume.DataBase.Services.Interfaces;
 using SiteResume.Models;
 namespace SiteResume.Controllers
 {
     public class MainController : Controller
     {
         private readonly ILogger<MainController> _logger;
-        public MainController(ILogger<MainController> logger)
+        private readonly IAboutMeService _aboutMeService;
+        public MainController(ILogger<MainController> logger, IAboutMeService aboutMeService)
         {
             _logger = logger;
+            _aboutMeService = aboutMeService;
         }
         [AllowAnonymous]
         public IActionResult Index()
@@ -21,7 +24,7 @@ namespace SiteResume.Controllers
         [AllowAnonymous]
         public IActionResult AboutMe()
         {
-            return View();
+            return View(_aboutMeService.GetEntry());
         }
         [AllowAnonymous]
         public IActionResult DownloadResume()

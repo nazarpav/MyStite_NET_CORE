@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SiteResume.DataBase.Context;
 
 namespace SiteResume.Migrations
 {
     [DbContext(typeof(SiteResumeDBContext))]
-    partial class SiteResumeDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200916230554_added_fields_to_aboutMe_table")]
+    partial class added_fields_to_aboutMe_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
